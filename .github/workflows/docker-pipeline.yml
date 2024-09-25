@@ -8,7 +8,7 @@ jobs:
   container_build:
     runs-on: ubuntu-latest
     container:
-      image: sagecentralhubacr.azurecr.io/sage/azure-ansible-github-runner
+      image: sagecentralhubacr.azurecr.io/sage/azure-ansible-github-runner:4efc83f
       credentials:
         username: ${{ vars.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
