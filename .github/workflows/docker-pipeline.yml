@@ -1,0 +1,14 @@
+name: Run pipeline inside docker
+on:
+  push:
+    branches:
+      - 'main'
+      - 'master'
+jobs:
+  container_build:
+    runs-on: ubuntu-latest
+    container:
+      image: node:18
+    steps:
+      - run: echo "Running 1.2.0"
+    
