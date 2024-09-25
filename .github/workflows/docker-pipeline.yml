@@ -8,9 +8,11 @@ jobs:
   container_build:
     runs-on: ubuntu-latest
     container:
-      image: node:18
+      image: sagecentralhubacr.azurecr.io/sage/azure-ansible-github-runner
+      credentials:
+        username: ${{ vars.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
     steps:
       - run: echo "Running 1.2.0"
-      - run: node --version
-      - run: npm --version
+      - run: cat /etc/os-release
     
